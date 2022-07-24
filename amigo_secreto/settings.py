@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'amigos',  # Registrando o APP na aplicacao
-    # 'usuarios',  # Registrando o APP na aplicacao
+    'usuarios',  # Registrando o APP na aplicacao
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

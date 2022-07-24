@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, get_list_or_404
 from .models import Amigo
 
 
@@ -15,4 +15,9 @@ def cadastrar_amigo(request):
 
 
 def detail(request, amigo_id):
-    return render(request, 'amigos/detail.html')
+    amigo = get_object_or_404(Amigo, pk=amigo_id)
+
+    amigo_a_exibir = {
+        'amigo': amigo
+    }
+    return render(request, 'amigos/detail.html', amigo_a_exibir)

@@ -7,3 +7,4 @@ class Amigo(models.Model):
     telefone = models.CharField(max_length=20, blank=False)
     email = models.CharField(max_length=100, blank=False)
     sugestao_presente = models.TextField(blank=True)
+

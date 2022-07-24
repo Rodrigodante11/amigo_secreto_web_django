@@ -31,20 +31,25 @@
     <section class="best-receipe-area">
         <div class="container">
             <div class="row">
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
 
-                        <div class="receipe-content">
-                            <a href="{% static 'site_receitas/receita.html' %}">
-                                <h5>Nome da receita</h5>
-                            </a>
+                {% if amigos %}
+                    {% for amigo in amigos %}
+
+                        <!-- Single Best Receipe Area -->
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="single-best-receipe-area mb-30">
+                                <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+
+                                <div class="receipe-content">
+                                    <a href="{% url 'detail' %}">
+                                        <h5>{{ amigo.nome }}</h5>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-
+                    {% endfor %}
+                {% else %}
+                {% endif %}
             </div>
         </div>
     </section>

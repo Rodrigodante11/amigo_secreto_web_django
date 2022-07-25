@@ -1374,3 +1374,8 @@ textarea:focus {
     position: absolute;
     right: 308px;
 }
+#searchbar{
+  position: absolute;
+  background-color: #0b0b0b;
+
+}

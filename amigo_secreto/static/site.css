@@ -357,12 +357,12 @@ textarea:focus {
 
 /* :: 4.0 Search Wrapper */
 .search-wrapper {
-  width: 30%;
+  width: 70%;
   height: 70px;
-  position: fixed;
+  position: absolute;
   z-index: 200;
-  top: 55px ;
-  right: 10px;
+  top: -20px ;
+  right: -700px;
   background-color: aqua;
   -webkit-transition-duration: 700ms;
   transition-duration: 700ms; }

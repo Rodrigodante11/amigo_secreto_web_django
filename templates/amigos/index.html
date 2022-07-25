@@ -8,33 +8,23 @@
         <img src="{% static 'img/core-img/load.jpg' %}" alt="">
     </div>
 
-
     {% include 'partials/_menu.html' %}
-
     <!-- ##### Best Receipe Area Start ##### -->
     <section class="best-receipe-area">
         <div class="container">
             <div class="row">
+                <!-- Single Best Receipe Area -->
+                <div id="amigo" class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-best-receipe-area mb-30">
+                        <img  src="{% static 'img/core-img/nfts/1.jpg' %}" alt="">
 
-<!--                {% if amigos %}-->
-<!--                    {% for amigo in amigos %}-->
-
-                        <!-- Single Best Receipe Area -->
-                        <div id="amigo" class="col-12 col-sm-6 col-lg-3">
-                            <div class="single-best-receipe-area mb-30">
-                                <img  src="{% static 'img/core-img/nfts/1.jpg' %}" alt="">
-
-                                <div class="receipe-content">
-                                    <a href="{% url 'detail' amigo.id %}">
-                                        <h4>Sala: ####2</h4>
-                                        <h6>Status: Oculta</h6>
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="receipe-content">
+                            <h4>Sala: ####</h4>
+                            <h6>Status: Oculta</h6>
                         </div>
-<!--                    {% endfor %}-->
-<!--                {% else %}-->
-<!--                {% endif %}-->
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

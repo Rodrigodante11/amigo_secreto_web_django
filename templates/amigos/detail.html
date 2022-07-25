@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="receipe-slider owl-carousel">
-                        <img src="{% static 'img/bg-img/tomate_banner.jpg' %}">
+                         <img  src={{ amigo.foto_amigo }} alt="">
                     </div>
                 </div>
             </div>
@@ -29,13 +29,12 @@
                 <div class="row">
                     <div class="col-12 col-md-8">
                         <div class="receipe-headline my-5">
-                            <span>30 de Fevereiro, 2000</span>
-                            <h2>{{amigo.nome}}</h2>
+                            <h2>{{amigo.getNome}}</h2>
                             <div class="receipe-duration">
-                                <h6>Telefone:  {{amigo.telefone}}</h6>
+                                <h6>Telefone:  {{amigo.getTelefone}}</h6>
                                 <h6>Email:  {{amigo.email}}</h6>
                                 <h6>Sugestao de Presente:  {{amigo.sugestao_presente}}</h6>
-                                 <h6>Adicionado Por :    {{amigo.usuario.nome}}a</h6>
+                                 <h6>Adicionado Por :    {{amigo.usuario}}</h6>
                             </div>
                         </div>
                     </div>

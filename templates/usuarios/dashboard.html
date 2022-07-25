@@ -1,10 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+{% extends 'base.html' %} <!-- extendendo o o base.html" -->
+{%  load static %}
+{% block content %}
 <body>
+    <!-- Preloader  enquanto espera aparece o png-->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="{% static 'img/core-img/pizza.png' %}" alt="">
+    </div>
 
-</body>
-</html>
+    {% include 'partials/_busca.html' %}
+
+    {% include 'partials/_menu.html' %}
+
+    <div class="contact-area section-padding-0-80">
+       <div class="container">
+           <div class="row">
+               <div class="col-12">
+                   <div class="section-heading">
+                       <h3>Olá {{ user.username }}</h3>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </div>
+    <!-- ##### Best Receipe Area Start ##### -->
+    <section class="best-receipe-area">
+        <div class="container">
+            <div class="row">
+
+                {% if amigos %}
+                    {% for amigo in amigos %}
+
+                        <!-- Single Best Receipe Area -->
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="single-best-receipe-area mb-30">
+                                <img id = 'teste' src="{% static '/img/bg-img/nfts/1.jpg' %}" alt="">
+
+                                <div class="receipe-content">
+                                    <a href="{% url 'detail' amigo.id %}">
+                                        <h5>{{ amigo.nome }}</h5>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    <!-- ##### Best Receipe Area End ##### -->
+
+    {% include 'partials/_footer.html' %}
+
+{% endblock %}

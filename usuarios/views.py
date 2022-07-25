@@ -5,8 +5,6 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 from amigos.models import Amigo
 import random
-
-
 # Create your views here.
 
 
@@ -90,7 +88,6 @@ def cadastrar_amigo(request):
         return redirect('dashboard')
 
     return render(request, 'usuarios/cadastrar_amigo.html')
-
 
 def campo_vazio(campo):
     return not campo.strip()

@@ -30,8 +30,10 @@ def buscar(request):
         if buscar:
             amigos = Amigo.objects.filter(nome__icontains=nome_a_buscar)
 
-    dados = {
-        'amigos': amigos
-    }
-    return render(request, 'amigos/buscar.html', dados)
+            dados = {
+                'amigos': amigos
+            }
+            return render(request, 'amigos/buscar.html', dados)
+
+    return render(request, 'amigos/buscar.html')
 

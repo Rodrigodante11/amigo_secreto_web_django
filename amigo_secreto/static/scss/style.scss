@@ -447,14 +447,14 @@ textarea:focus {
 /* :: 4.0 Search Wrapper */
 
 .search-wrapper {
-    width: 100%;
+    width: 30%;
     height: 70px;
-    position: fixed;
+    //position: fixed;
     z-index: 200;
-    top: -80px;
-    left: 0;
-    background-color: $bg-default;
-    @include trans-duration(700ms);
+    top: -20px;
+    left: 900px;
+    background-color: aqua;
+
     form {
         position: relative;
         z-index: 1;
@@ -483,6 +483,7 @@ textarea:focus {
             @media #{$breakpoint-xs} {
                 right: 20%;
             }
+
         }
     }
     .close-btn {

@@ -2,34 +2,6 @@
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
 
-        <!-- Top Header Area
-        <div class="top-header-area">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center justify-content-between">
-
-                    <div class="col-12 col-sm-6">
-                        <div class="breaking-news">
-                            <div id="breakingNewsTicker" class="ticker">
-                                <ul>
-                                    <li><a href="">Boas vindas!</a></li>
-                                    <li><a href="">As melhores receitas</a></li>
-                                    <li><a href="">Você encontra aqui!</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-12 col-sm-6">
-                        <div class="top-social-info text-right">
-                            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <!-- Navbar Area -->
         <div class="delicious-main-menu">
             <div class="classy-nav-container breakpoint-off">
@@ -37,8 +9,6 @@
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
-                        <!-- Logo -->
-                        <a class="nav-brand" href="{% url 'index' %}"><img src="{% static 'img/core-img/logo.jpg' %}" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -54,7 +24,7 @@
                             </div>
 
                             <!-- Nav Start -->
-                            <div class="classynav">
+                            <div id="opcoes" class="classynav">
                                 <ul>
 
                                     <li><a href="{% url 'index' %}">Home</a></li>
@@ -64,17 +34,26 @@
                                     <li><a href="{% url 'cadastrar_amigo' %}">Cadastrar Amigo</a></li>
                                     <li><a href="{% url 'dashboard' %}">Meus Amigos</a></li>
                                     <li><a href="{% url 'logout' %}">Log Out</a></li>
+                                    <div class="search-wrapper">
+
+
+                                                <form action="{% url 'buscar' %}">
+                                                    <input type="text" name="buscar" placeholder="O que está procurando...">
+                                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                                </form>
+
+                                        </div>
+                                    </div>
                                     {% else %}
                                         <li><a href="{% url 'cadastro' %}">Cadastrar Usuario</a></li>
                                         <li><a href="{% url 'login' %}">Login</a></li>
                                     {% endif %}
+
+
+                                </div>
+
                                 </ul>
 
-                                <!-- Formulario de busca -->
-                                <div class="search-btn">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
-                                <!-- Formulario de busca -->
 
                             </div>
                             <!-- Nav End -->

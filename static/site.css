@@ -462,7 +462,7 @@ textarea:focus {
       .header-area .delicious-main-menu {
         height: 80px; } }
     .header-area .delicious-main-menu .classy-nav-container {
-      background-color: transparent; }
+      background-color: aqua; }
     .header-area .delicious-main-menu .classy-navbar {
       height: 145px;
       padding: 0; }
@@ -1370,3 +1370,7 @@ textarea:focus {
     padding-left: 30px; }
 
 /*# sourceMappingURL=style.css.map */
+#opcoes {
+    position: absolute;
+    right: 308px;
+}

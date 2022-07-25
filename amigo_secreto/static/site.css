@@ -1375,3 +1375,7 @@ textarea:focus {
     position: absolute;
     right: 700px;
 }
+
+#amigo{
+  width: 200px;
+}

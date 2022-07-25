@@ -12,4 +12,8 @@ class Amigo(models.Model):
     sugestao_presente = models.TextField(blank=True)
     foto_amigo = models.CharField(max_length=200, blank=True)
 
+    def getTelefone(self):
+        return "("+self.telefone[0:2]+") "+self.telefone[2:7]+"-"+self.telefone[7:11]
 
+    def getNome(self):
+        return self.nome.title()

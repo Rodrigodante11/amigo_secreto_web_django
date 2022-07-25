@@ -26,7 +26,7 @@
            <div class="col-12">
            <p>Todos os campos são obrigatórios</p>
                <div class="contact-form-area">
-                   <form action="" method="post" enctype="multipart/form-data">
+                   <form action="cadastrar_amigo" method="POST" enctype="multipart/form-data">
                            {% csrf_token %}
                        <div class="row">
                            <div class="col-12 col-lg-12">
@@ -39,13 +39,13 @@
                                <input type="text" id="email" class="form-control" name="email" placeholder="Ex. Gabrielaoliveira@gmail.com" required>
                            </div>
 
-                           <div class="col-12 col-lg-8">
-                               <label for="email"><b>Nome</b></label>
-                               <input type="text" id="telefone" class="form-control" name="telefone" placeholder="Ex. 99999999" required>
+                           <div class="col-12 col-lg-6">
+                               <label for="Telefone"><b>Telefone</b></label>
+                               <input type="phone" id="telefone" class="form-control" name="telefone" placeholder="Ex. 99999999" required>
                            </div>
 
-                           <div class="col-12 col-lg-3">
-                               <label for="text"><b>Sujestao de Presente</b></label>
+                           <div class="col-12 col-lg-6">
+                               <label for="Telefone"><b>Sujestao de Presente</b></label>
                                <input type="text" class="form-control" name="sujestao" placeholder="Ex. Playstation5" required>
                            </div>
                            <div class="col-12 text-center">

@@ -1,6 +1,11 @@
-from django.shortcuts import render, redirect
+import random
+
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import auth
+from amigos.models import Amigo
+import random
+
 
 # Create your views here.
 
@@ -58,15 +63,34 @@ def logout(request):
 
 def dashboard(request):
     if request.user.is_authenticated:
-        return render(request, 'usuarios/dashboard.html')
+        amigos = Amigo.objects.filter(usuario=request.user.id)
+
+        dados = {
+            'amigos': amigos
+        }
+        return render(request, 'usuarios/dashboard.html', dados)
     else:
         return redirect('index')
 
 
 def cadastrar_amigo(request):
+    if request.method == 'POST':
+        nome = request.POST['nome']
+        email = request.POST['email']
+        telefone = request.POST['telefone']
+        sujestao = request.POST['sujestao']
+
+        randomico = random.randint(1, 12)
+        local = 'http://127.0.0.1:8000/static/img/bg-img/nfts/' + str(randomico) + '.jpg'
+
+        user = get_object_or_404(User, pk=request.user.id)
+        amigo = Amigo.objects.create(usuario=user, nome=nome, telefone=telefone, email=email,
+                                     sugestao_presente=sujestao, foto_amigo=local)
+        amigo.save()
+        return redirect('dashboard')
+
     return render(request, 'usuarios/cadastrar_amigo.html')
 
 
 def campo_vazio(campo):
     return not campo.strip()
-

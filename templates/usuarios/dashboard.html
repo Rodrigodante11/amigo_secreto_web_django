@@ -17,7 +17,7 @@
            <div class="row">
                <div class="col-12">
                    <div class="section-heading">
-                       <h3>Olá {{ user.username }}</h3>
+                       <h3>Olá {{ user.username }} , esse sao seus amigos Registrados: </h3>
                    </div>
                </div>
            </div>
@@ -34,7 +34,7 @@
                         <!-- Single Best Receipe Area -->
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div class="single-best-receipe-area mb-30">
-                                <img id = 'teste' src="{% static '/img/bg-img/nfts/1.jpg' %}" alt="">
+                                <img  src={{ amigo.foto_amigo }} alt="">
 
                                 <div class="receipe-content">
                                     <a href="{% url 'detail' amigo.id %}">

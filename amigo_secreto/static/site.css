@@ -361,7 +361,7 @@ textarea:focus {
   height: 70px;
   position: fixed;
   z-index: 200;
-  top: 55px;
+  top: 55px ;
   right: 10px;
   background-color: aqua;
   -webkit-transition-duration: 700ms;

@@ -22,12 +22,12 @@
                         <!-- Single Best Receipe Area -->
                         <div id="amigo" class="col-12 col-sm-6 col-lg-3">
                             <div class="single-best-receipe-area mb-30">
-                                <img  src={{ amigo.foto_amigo }} alt="">
+                                <img  src="{% static 'img/core-img/nfts/1.jpg' %}" alt="">
 
                                 <div class="receipe-content">
                                     <a href="{% url 'detail' amigo.id %}">
-                                        <h4>{{ amigo.getNome }}</h4>
-                                        <h6>{{ amigo.getTelefone }}</h6>
+                                        <h4>Sala: ####</h4>
+                                        <h6>Status: Oculta</h6>
                                     </a>
                                 </div>
                             </div>

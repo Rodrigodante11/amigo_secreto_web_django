@@ -63,5 +63,10 @@ def dashboard(request):
         return redirect('index')
 
 
+def cadastrar_amigo(request):
+    return render(request, 'usuarios/cadastrar_amigo.html')
+
+
 def campo_vazio(campo):
     return not campo.strip()
+

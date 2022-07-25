@@ -14,10 +14,6 @@ def index(request):
     return render(request, 'amigos/index.html', dados)
 
 
-def cadastrar_amigo(request):
-    return render(request, 'amigos/cadastrar_amigo.html')
-
-
 def detail(request, amigo_id):
     amigo = get_object_or_404(Amigo, pk=amigo_id)
 
@@ -38,3 +34,4 @@ def buscar(request):
         'amigos': amigos
     }
     return render(request, 'amigos/buscar.html', dados)
+

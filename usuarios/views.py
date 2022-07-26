@@ -85,9 +85,11 @@ def cadastrar_amigo(request):
         amigo = Amigo.objects.create(usuario=user, nome=nome, telefone=telefone, email=email,
                                      sugestao_presente=sujestao, foto_amigo=local)
         amigo.save()
+
         return redirect('dashboard')
 
     return render(request, 'usuarios/cadastrar_amigo.html')
+
 
 def campo_vazio(campo):
     return not campo.strip()

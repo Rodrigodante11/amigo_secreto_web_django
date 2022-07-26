@@ -1,6 +1,6 @@
 import random
 
-from django.shortcuts import render, get_object_or_404, get_list_or_404
+from django.shortcuts import render, get_object_or_404, get_list_or_404, redirect
 from .models import Amigo
 
 
@@ -24,7 +24,6 @@ def detail(request, amigo_id):
 
 
 def buscar(request):
-
     if 'buscar' in request.GET:
         nome_a_buscar = request.GET['buscar']
         if buscar:
@@ -37,3 +36,8 @@ def buscar(request):
 
     return render(request, 'amigos/buscar.html')
 
+
+def excluir_amigo(request):
+    amigo_id = request.POST['id']
+    # Amigo.objects.filter(id=amigo_id).delete()
+    return redirect('dashboard')

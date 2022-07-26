@@ -43,10 +43,21 @@
                             </div>
                         </div>
                     {% endfor %}
+
                 {% else %}
                 {% endif %}
             </div>
         </div>
+        </br>
+        <form action="uniar_amigos" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="col-12 col-lg-2">
+                 <input type="text" id="nomeDetail" class="form-control" name="id" value={{amigo.id}} >
+            </div>
+            <div class="col-12 text-center">
+                <button class="btn delicious-btn mt-30" type="submit" onclick="exibirMensagem();">Juntar </button>
+            </div>
+        </form>
     </section>
     <!-- ##### Best Receipe Area End ##### -->
 

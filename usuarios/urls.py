@@ -7,5 +7,5 @@ urlpatterns = [
     path('dashboard', views.dashboard, name='dashboard'),
     path('logout', views.logout, name='logout'),
     path('cadastrar_amigo', views.cadastrar_amigo, name='cadastrar_amigo'),
-
+    path('uniar_amigos', views.uniar_amigos, name='uniar_amigos'),
 ]

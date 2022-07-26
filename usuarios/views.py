@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import auth
 from amigos.models import Amigo
+from twilio.rest import Client
+
 import random
 # Create your views here.
 
@@ -93,3 +95,17 @@ def cadastrar_amigo(request):
 
 def campo_vazio(campo):
     return not campo.strip()
+
+
+def uniar_amigos(request):
+    global teste
+    for amigo in Amigo.objects.all():
+        teste = amigo.nome
+        print(amigo.telefone)
+
+    account_sid = "ACd58ffbdf0de22d7691fdce9cc33030c6"
+    auth_sid = "3eaa69b8d3cc4b1dcc83555f485a5707"
+    twilioNumber = "+12058502461"
+    client = Client(account_sid, auth_sid)
+    client.messages.create(from_=twilioNumber, body="Olaaa "+teste+" Seu amigo esta aqui", to="+5535998081577")
+    return redirect('dashboard')

@@ -39,5 +39,5 @@ def buscar(request):
 
 def excluir_amigo(request):
     amigo_id = request.POST['id']
-    # Amigo.objects.filter(id=amigo_id).delete()
+    Amigo.objects.filter(id=amigo_id).delete()
     return redirect('dashboard')

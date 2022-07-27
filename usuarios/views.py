@@ -98,14 +98,13 @@ def campo_vazio(campo):
 
 
 def uniar_amigos(request):
+
+
     global teste
     for amigo in Amigo.objects.all():
         teste = amigo.nome
         print(amigo.telefone)
 
-    account_sid = "ACd58ffbdf0de22d7691fdce9cc33030c6"
-    auth_sid = "3eaa69b8d3cc4b1dcc83555f485a5707"
-    twilioNumber = "+12058502461"
-    client = Client(account_sid, auth_sid)
-    client.messages.create(from_=twilioNumber, body="Olaaa "+teste+" Seu amigo esta aqui", to="+5535998081577")
+    # client = Client(account_sid, auth_sid)
+    # client.messages.create(from_=twilioNumber, body="Rodrigo Aqui fazendo test em python", to="+5535999288915")
     return redirect('dashboard')

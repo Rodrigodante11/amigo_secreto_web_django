@@ -34,14 +34,14 @@
                     {% for amigo in amigos %}
 
                         <!-- Single Best Receipe Area -->
-                        <div class="col-12 col-sm-6 col-lg-4">
+                        <div id="amigo" class="col-12 col-sm-6 col-lg-3">
                             <div class="single-best-receipe-area mb-30">
-                                <img id = 'teste' src="{% static '/img/bg-img/nfts/1.jpg' %}" alt="">
+                                <img  src={{ amigo.foto_amigo }} alt="">
 
                                 <div class="receipe-content">
                                     <a href="{% url 'detail' amigo.id %}">
-                                        <h5>{{ amigo.nome }}</h5>
-
+                                        <h4>{{ amigo.getNome }}</h4>
+                                        <h6>{{ amigo.getTelefone }}</h6>
                                     </a>
                                 </div>
                             </div>

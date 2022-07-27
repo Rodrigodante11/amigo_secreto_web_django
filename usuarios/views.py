@@ -99,7 +99,6 @@ def campo_vazio(campo):
 
 def uniar_amigos(request):
 
-
     global teste
     for amigo in Amigo.objects.all():
         teste = amigo.nome

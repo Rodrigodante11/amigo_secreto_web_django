@@ -7,3 +7,7 @@ Rodar o arquivo Requirements com as dependencias do Projeto
 ```
  pip install -r requirements.txt
 ```
+
+
+rodrigoaugusto839@gmail.com
+123456

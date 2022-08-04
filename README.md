@@ -1,5 +1,5 @@
 <h1 aligh="center"> Amigo secreto Web com Django e Postgre <h2>
-# App desenvolvido para praticar django
+App desenvolvido para praticar django
 
 Para baixar o projeto
 
